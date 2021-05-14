@@ -22,7 +22,7 @@ pipeline {
                 body: 'Please do to ${BUILD_URL} and verify the build',
                 attachLog: ture,
                 compressLog: ture,
-                to:"dubemahendra@gmail.com",
+                to:"dubemahendra@gmail1.com",
                 recipientProviders: [upstreamDevelopers(), requester()]
 
            }
