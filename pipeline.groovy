@@ -24,7 +24,6 @@ pipeline {
                 compressLog: ture,
                 to:"dubemahendra@gmail.com",
                 recipientProviders: [upstreamDevelopers(), requester()]
-
            }
         }
     }
