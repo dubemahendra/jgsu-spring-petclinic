@@ -11,7 +11,6 @@ pipeline {
 			steps	{
                 sh './mvnw clean package' 
 					}
-			
 			post {
                 always {
                     junit '**/target/surefire-reports/TEST-*.xml'
@@ -24,6 +23,7 @@ pipeline {
                 compressLog: ture,
                 to:"dubemahendra@gmail.com",
                 recipientProviders: [upstreamDevelopers(), requester()]
+
            }
         }
     }

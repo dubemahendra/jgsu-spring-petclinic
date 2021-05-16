@@ -1,3 +1,47 @@
 {
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "jenkins-runner.hostConfigs": {
+
+        "host-with-password": {
+            "url": "http://localhost:9081",
+            "user": "admin",
+            "password": "admin",
+            "useCrumbIssuer": false,
+            "rejectUnauthorizedCert": false
+        },
+        "host-prompt-for-password": {
+            "url": "http://localhost:9081",
+            "user": "admin"
+        },
+        "host-no-password": {
+            "url": "http://localhost:9081"
+        }
+    },
+    "jenkins-runner.jobs": {
+
+        "spc": {
+            "isDefault": true,
+            "runWith": "http://localhost:9081",
+            "name": "spc",
+            "parameters": {
+                "first": 1,
+                "second": "2nd"
+            },
+            "environment": {
+                "HOST_NAME": "localhost"
+            }
+        },
+        "test-2": {
+            "runWith": [
+                "http://localhost:9081",
+                "http://localhost:9081"
+            ],
+            "name": "test-2"
+        }
+    },
+    "launch": {
+
+        "configurations": [],
+        "compounds": []
+    }
 }
